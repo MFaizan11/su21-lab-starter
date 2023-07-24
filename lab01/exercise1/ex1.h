@@ -6,8 +6,8 @@ typedef struct DNA_sequence {
     int A_count;
     int C_count;
     int G_count;
-    int T_count;
-} DNA_sequence;
+    int T_count; 
+} DNA_sequence; 
 
 int num_occurrences(char *str, char letter);
 void compute_nucleotide_occurrences(DNA_sequence *dna_seq);
