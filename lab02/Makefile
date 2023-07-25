@@ -1,16 +1,20 @@
 CC=gcc
-CFLAGS=-Wall -std=c99
+CFLAGS= -g -Wall -std=c99
+E = bit_ops
+TE = test_bit_ops
 
-all: linked_list
+all: build
+	./$(E)
 
-linked_list: linked_list.o test_linked_list.o
-	$(CC) -o linked_list linked_list.o test_linked_list.o
+build: bit_ops.o test_bit_ops.o
+	$(CC) -o $(E) $(E).o $(TE).o
 
-linked_list.o: linked_list.c linked_list.h
-	$(CC) $(CFLAGS) -c linked_list.c
+bit_ops.o:
+	$(CC) $(CFLAGS) -c $(E).c
 
-test_linked_list.o: test_linked_list.c linked_list.h
-	$(CC) $(CFLAGS) -c test_linked_list.c
+test_bit_ops.o:
+	$(CC) $(CFLAGS) -c $(TE).c
 
+.PHONY: clean
 clean:
-	rm linked_list linked_list.o test_linked_list.o
+	rm $(E) $(E).o $(TE).o

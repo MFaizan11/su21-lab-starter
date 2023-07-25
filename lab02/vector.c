@@ -1,3 +1,4 @@
+// "Copyright [2023] Muhammad Faizan"
 /* Include the system headers we need */
 #include <stdlib.h>
 #include <stdio.h>
