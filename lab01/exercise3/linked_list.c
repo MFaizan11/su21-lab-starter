@@ -76,12 +76,12 @@ void reverse_list(struct Node **head) {
 void add_to_back(Node **head, int data) {
     Node *new_node = create_node(data);
     Node *prev;
+     if (*head == NULL) {
+        *head = new_node;
+    } else {
     for (Node *curr = *head; curr != NULL; curr = curr->next) {
         prev = curr;
     }
-    if (*head == NULL) {
-        *head = new_node;
-    } else {
-        prev->next = new_node;
+     prev->next = new_node;
     }
 }
