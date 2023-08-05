@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "linked_list.h": "c",
+        "ll_cycle.h": "c",
+        "vector.h": "c"
+    },
+    "cpplint.cpplintPath": "/home/tenx/.local/bin/cpplint"
+}
